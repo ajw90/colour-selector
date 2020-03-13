@@ -1,7 +1,7 @@
     // This object encapsulates the logic of the hexadecimal colour selector; without making too many 
 // assumptions about the interface seen by the end-user.
 
-let colourSelector = 
+var colourSelector = 
 {
     hexValues: [0, 0, 0, 0, 0, 0],
     black: function ()
