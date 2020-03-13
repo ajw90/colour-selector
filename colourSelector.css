@@ -1,0 +1,32 @@
+body
+{
+	background-color: #000000;
+}
+.RGBButton
+{
+	border-radius: 10px;
+	font-weight: bold;
+	width: 80px;
+}
+#menu
+{
+	background-color: #888888;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 2px;
+	margin: auto;
+	padding: 5px;
+	text-align: center;	  
+	width: 175px;
+}
+#show_button
+{
+    display: none;
+    border-color: #000000;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    height: 20px;
+    margin: auto;
+    width: 20px;
+}
