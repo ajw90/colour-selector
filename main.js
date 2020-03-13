@@ -41,7 +41,7 @@ $(document).ready
             (event) =>
             {
                 $("#menu").css("display", "none");
-                $("#show_button").css("display", "block");
+                $("#showButton").css("display", "block");
             }
         );
         $("#showButton").on
@@ -49,7 +49,7 @@ $(document).ready
             "click",
             (event) =>
             {
-                $("#show_button").css("display", "none");
+                $("#showButton").css("display", "none");
                 $("#menu").css("display", "block");
             }
         );
