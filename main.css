@@ -19,7 +19,7 @@ body
 	text-align: center;	  
 	width: 175px;
 }
-#show_button
+#showButton
 {
     display: none;
     border-color: #000000;

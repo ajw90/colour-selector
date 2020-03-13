@@ -1,7 +1,7 @@
     // This object encapsulates the logic of the hexadecimal colour selector; without making too many 
 // assumptions about the interface seen by the end-user.
 
-var colourSelector = 
+let colourSelector = 
 {
     hexValues: [0, 0, 0, 0, 0, 0],
     black: function ()
@@ -10,8 +10,8 @@ var colourSelector =
     },
     hexToRGBString: function ()
     {
-    	var i;
-    	var colourString = "#";
+    	let i;
+    	let colourString = "#";
         for (i in this.hexValues)
         {
             current = this.hexValues[i];

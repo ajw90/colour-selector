@@ -3,12 +3,12 @@
 
 $(document).ready
 (
-    function ()
+    () =>
     {
     	$(".plus").on
     	(
     		"click",
-            function (event)
+            (event) =>
             {
                 colourSelector.increment($(event.target).attr("data-hex-value"));            
                 $("#RGBNumber").text(colourSelector.hexToRGBString());
@@ -18,36 +18,36 @@ $(document).ready
         $(".minus").on
         (
             "click",
-            function (event)
+            (event) =>
             {
                 colourSelector.decrement($(event.target).attr("data-hex-value"));                
                 $("#RGBNumber").text(colourSelector.hexToRGBString());                
                 $("body").css("background-color", colourSelector.hexToRGBString());
             }
         );    
-        $("#reset_button").on
+        $("#resetButton").on
         (
             "click",
-            function (event)
+            (event) =>
             {
                 colourSelector.black();
                 $("#RGBNumber").text(colourSelector.hexToRGBString());
                 $("body").css("background-color", colourSelector.hexToRGBString());
             }
         );
-        $("#hide_button").on
+        $("#hideButton").on
         (
             "click",
-            function (event)
+            (event) =>
             {
                 $("#menu").css("display", "none");
                 $("#show_button").css("display", "block");
             }
         );
-        $("#show_button").on
+        $("#showButton").on
         (
             "click",
-            function (event)
+            (event) =>
             {
                 $("#show_button").css("display", "none");
                 $("#menu").css("display", "block");
