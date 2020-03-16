@@ -1,55 +1,45 @@
-// With the assistance of JQuery, the hexadecimal colour selector's functionality is incorporated into the 
-// client-side HTML/CSS interface.
+/*
+* With the assistance of JQuery, the hexadecimal colour selector's functionality is incorporated into the 
+* client-side HTML/CSS interface.
+*/
 
-$(document).ready
-(
-    function ()
-    {
-    	$(".plus").on
-    	(
+$(document).ready(
+    () => {
+    	$(".plus").on(
     		"click",
-            function (event)
-            {
+            (event) => {
                 colourSelector.increment($(event.target).attr("data-hex-value"));            
                 $("#RGBNumber").text(colourSelector.hexToRGBString());
                 $("body").css("background-color", colourSelector.hexToRGBString());
             }
     	);
-        $(".minus").on
-        (
+        $(".minus").on(
             "click",
-            function (event)
-            {
+            (event) => {
                 colourSelector.decrement($(event.target).attr("data-hex-value"));                
                 $("#RGBNumber").text(colourSelector.hexToRGBString());                
                 $("body").css("background-color", colourSelector.hexToRGBString());
             }
         );    
-        $("#reset_button").on
-        (
+        $("#resetButton").on(
             "click",
-            function (event)
-            {
-                colourSelector.black();
+            (event) => {
+                colourSelector.reset();
                 $("#RGBNumber").text(colourSelector.hexToRGBString());
                 $("body").css("background-color", colourSelector.hexToRGBString());
             }
         );
-        $("#hide_button").on
-        (
+        $("#hideButton").on(
             "click",
-            function (event)
-            {
+            (event) => {
                 $("#menu").css("display", "none");
-                $("#show_button").css("display", "block");
+                $("#showButton").css("display", "block");
             }
         );
-        $("#show_button").on
-        (
+        $("#showButton").on(
             "click",
-            function (event)
-            {
-                $("#show_button").css("display", "none");
+            (event) => {
+                $("#showButton").css("display", "none");
                 $("#menu").css("display", "block");
             }
         );

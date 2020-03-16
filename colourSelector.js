@@ -1,23 +1,19 @@
-    // This object encapsulates the logic of the hexadecimal colour selector; without making too many 
-// assumptions about the interface seen by the end-user.
+/*
+* This object encapsulates the logic of the hexadecimal colour selector; without making too many 
+* assumptions about the interface seen by the end-user.
+*/
 
-var colourSelector = 
-{
+let colourSelector = {
     hexValues: [0, 0, 0, 0, 0, 0],
-    black: function ()
-    {
+    reset: function () {
         this.hexValues = [0, 0, 0, 0, 0, 0];
     },
-    hexToRGBString: function ()
-    {
-    	var i;
-    	var colourString = "#";
-        for (i in this.hexValues)
-        {
+    hexToRGBString: function () {
+    	let i;
+    	let colourString = "#";
+        for (i in this.hexValues) {
             current = this.hexValues[i];
-    
-            switch (current)
-            {
+            switch (current) {
             	case 10: colourString += "A"; break;
             	case 11: colourString += "B"; break;
             	case 12: colourString += "C"; break;
@@ -29,35 +25,25 @@ var colourSelector =
         }       
         return colourString;
     }, 
-    increment: function (n)
-    {
-    	if (n < 0 || n > 5)
-    	{
+    increment: function (n) {
+    	if (n < 0 || n > 5) {
     		return;
     	}
-    
-        if (this.hexValues[n] === 15)
-        {
+        if (this.hexValues[n] === 15) {
         	return;
         }
-        else
-        {
+        else {
         	this.hexValues[n]++;
         }
     },
-    decrement: function (n)
-    {
-    	if (n < 0 || n > 5)
-    	{
+    decrement: function (n) {
+    	if (n < 0 || n > 5) {
     		return;
-    	}
-    
-        if (this.hexValues[n] === 0)
-        {
+    	}    
+        if (this.hexValues[n] === 0) {
         	return;
         }
-        else
-        {
+        else {
         	this.hexValues[n]--;
         }
     }
